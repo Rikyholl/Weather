@@ -1,0 +1,28 @@
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+
+*,
+*:after,
+*:before{
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+// Elements
+
+@import './pages/Home/components/home.scss';
+
+@import './components/header/header.scss';
+@import './pages/Home/components/ThisDay/thisDay.scss';
+@import './pages/Home/components/ThisDay/ThisDayComponents/thisDayInfo.scss'
