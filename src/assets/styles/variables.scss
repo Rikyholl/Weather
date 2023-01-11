@@ -13,19 +13,19 @@ $card-bg-light: rgba(71, 147, 255, 0.2);
 $card-bg-dark: #2E3035;
 
 :root {
-    --bg-light: #{$bg-dark};
+    --bg-light: #{$bg-light};
     --bg-dark: #{$bg-dark};
     --bg-default: var(#{--bg-light});
 
-    --component-bg-light: #{$component-bg-dark};
+    --component-bg-light: #{$component-bg-light};
     --component-bg-dark: #{$component-bg-dark};
     --component-bg-default: var(#{--component-bg-light});
 
-    --card-bg-light:#{$card-bg-dark};
+    --card-bg-light:#{$card-bg-light};
     --card-bg-dark:#{$card-bg-dark};
     --card-bg-default:var(#{--card-bg-light});
 
-    --color-light:#{$color-dark};
+    --color-light:#{$color-light};
     --color-dark:#{$color-dark};
     --color-default:var(#{--color-light});
 }
