@@ -39,7 +39,7 @@ const ThisDayInfo = () =>{
                 ))
             }
 
-            <img src="./images/clouds.png" className="clouds"/>
+            <img src="./images/clouds.png" className="clouds" alt="clouds" />
         </div>
     );
 }

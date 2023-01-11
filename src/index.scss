@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
+	background: var(#{--bg-default});
 }
 
 *,
@@ -21,8 +22,14 @@ h1, h2, h3, h4, h5, h6{
 }
 // Elements
 
+@import './components/header/header.scss';
+
 @import './pages/Home/components/home.scss';
 
-@import './components/header/header.scss';
+
 @import './pages/Home/components/ThisDay/thisDay.scss';
-@import './pages/Home/components/ThisDay/ThisDayComponents/thisDayInfo.scss'
+@import './pages/Home/components/ThisDay/ThisDayComponents/thisDayInfo.scss';
+@import './pages/Home/components/Days/Card/card.scss';
+@import './pages/Home/components/Days/Card/tabs.scss';
+@import './components/popup/popup.scss';
+@import './assets/styles/variables.scss';
