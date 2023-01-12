@@ -2,21 +2,23 @@ import Logo from "../../assets/images/icons/logo";
 import Theme from "../../assets/images/icons/theme";
 import Select from 'react-select';
 import { useEffect, useState } from "react";
+import useTheme from "../../hooks/useTheme";
 
 const Header = () => {
+
+const theme = useTheme();
 
 const options = [
     { value: 'Moscow', label: 'Moscow' },
     { value: 'Perm', label: 'Perm' },
     { value: 'Ekaterinburg', label: 'Ekaterinburg' }
-]
+];
 
-const [theme, setTheme] = useState('light');
 
 const colourStyles = {
     control: (styles) => ({
         ...styles,
-        backgroundColor: theme === 'dark' ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
+        backgroundColor: theme.theme === 'dark' ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
         width: '194px',
         height: '37px',
         border: 'none',
@@ -26,35 +28,35 @@ const colourStyles = {
     }),
     singleValue: (styles) => ({
         ...styles,
-        color: theme === 'dark' ? '#fff' : '#000',
+        color: theme.theme === 'dark' ? '#fff' : '#000',
     }),
 };
 
 
 function changeTheme(){
-    setTheme(theme === 'light' ? 'dark' : 'light');
+   theme.changeTheme(theme.theme === 'light' ? 'dark' : 'light')
 }
 
-useEffect(() => {
+// useEffect(() => {
 
-    const root = document.querySelector(':root');
+//     const root = document.querySelector(':root');
 
-    const components = [
-        'bg-default', 
-        'component-bg', 
-        'card-bg', 
-        'color'
-    ];
+//     const components = [
+//         'bg-default', 
+//         'component-bg', 
+//         'card-bg', 
+//         'color'
+//     ];
 
-    root.style.setProperty('--bg-default', `var(--bg-${theme})`);
+//     root.style.setProperty('--bg-default', `var(--bg-${theme.theme})`);
 
-    components.forEach((component) => {
-        root.style.setProperty(
-            `--${component}-default`, 
-            `var(--${component}-${theme})`
-        );
-    })
-}, [theme])
+//     components.forEach((component) => {
+//         root.style.setProperty(
+//             `--${component}-default`, 
+//             `var(--${component}-${theme.theme})`
+//         );
+//     })
+// }, [theme.theme]);
 
  return(
 
